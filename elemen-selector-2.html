@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodePolitan JQuery</title>
+  </head>
+  <body>
+    <h1>Where do want to go?</h1>
+    <p>Plan your next adventure</p>
+    <ul id="destinations">
+      <li>Rome</li>
+      <li>Paris</li>
+      <li class="promo">Rio</li>
+    </ul>
+    <button>Aksi</button>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <!-- Menyembunyikan element tertentu -->
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("li").text("Orlando");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodePolitan JQuery - Plugins</title>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css" />
+  </head>
+  <body>
+    <div class="your-class">
+      <div>Konten1</div>
+      <div>
+        Konten2
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
+          expedita fugit ut consequuntur at consectetur eveniet, libero quisquam
+          alias voluptatibus saepe tenetur quam fugiat corporis fuga molestias
+          aut minus praesentium doloribus. Repudiandae facilis nostrum magni et,
+          tenetur beatae recusandae perferendis? Maiores quos corrupti ad
+          voluptas, mollitia atque enim ratione nemo optio soluta excepturi
+          quasi, itaque numquam voluptate maxime, cumque possimus amet eveniet
+          dolorem. Asperiores ad eaque libero sapiente minus magnam, incidunt
+          dolorem nam minima doloribus a autem cumque in temporibus harum sint
+          laudantium odio eos aperiam voluptate ipsam facere nisi deserunt esse.
+          Corrupti vel voluptatum, exercitationem nisi illum deserunt veniam!
+        </p>
+      </div>
+      <div>
+        Konten3
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
+          expedita fugit ut consequuntur at consectetur eveniet, libero quisquam
+          alias voluptatibus saepe tenetur quam fugiat corporis fuga molestias
+          aut minus praesentium doloribus. Repudiandae facilis nostrum magni et,
+          tenetur beatae recusandae perferendis? Maiores quos corrupti ad
+          voluptas, mollitia atque enim ratione nemo optio soluta excepturi
+          quasi, itaque numquam voluptate maxime, cumque possimus amet eveniet
+          dolorem. Asperiores ad eaque libero sapiente minus magnam, incidunt
+          dolorem nam minima doloribus a autem cumque in temporibus harum sint
+          laudantium odio eos aperiam voluptate ipsam facere nisi deserunt esse.
+          Corrupti vel voluptatum, exercitationem nisi illum deserunt veniam!
+        </p>
+      </div>
+      <div>
+        Konten4
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
+          expedita fugit ut consequuntur at consectetur eveniet, libero quisquam
+          alias voluptatibus saepe tenetur quam fugiat corporis fuga molestias
+          aut minus praesentium doloribus. Repudiandae facilis nostrum magni et,
+          tenetur beatae recusandae perferendis? Maiores quos corrupti ad
+          voluptas, mollitia atque enim ratione nemo optio soluta excepturi
+          quasi, itaque numquam voluptate maxime, cumque possimus amet eveniet
+          dolorem. Asperiores ad eaque libero sapiente minus magnam, incidunt
+          dolorem nam minima doloribus a autem cumque in temporibus harum sint
+          laudantium odio eos aperiam voluptate ipsam facere nisi deserunt esse.
+          Corrupti vel voluptatum, exercitationem nisi illum deserunt veniam!
+        </p>
+      </div>
+    </div>
+
+    <div id="page">
+      <header></header>
+      <main>
+        {{ Page Content }}
+        <!-- Add a button to open the popup (optional) -->
+        <button class="JPO_open">Open popup</button>
+      </main>
+      <footer></footer>
+    </div>
+
+    <!-- Add content to the popup -->
+    <div id="JPO">
+      {{ Popup Content }}
+      <!-- Add a button to close the popup (optional) -->
+      <button class="JPO_close">Close</button>
+    </div>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="jquery-popup-overlay/jquery.popupoverlay.js"></script>
+
+    <!-- <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script> -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".your-class").slick({});
+      });
+
+      // <!-- Include jQuery Popup Overlay -->
+
+      $(document).ready(function () {
+        // Initialize the plugin
+        $("#JPO").popup();
+
+        // Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
+        $.fn.popup.defaults.pagecontainer = "#page";
+      });
+    </script>
+  </body>
+</html>

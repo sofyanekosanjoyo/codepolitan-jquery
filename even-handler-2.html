@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodePolitan JQuery - Fitur Efek</title>
+  </head>
+  <body>
+    <h1>Mau pergi kemana?</h1>
+    <ul class="lokasi">
+      <li class="bandung"></li>
+      <li id="surabaya"><strong>Surabaya</strong></li>
+      <li class="jogja">Jogja</li>
+      <li id="jakarta">Jakarta</li>
+      <li>
+        <input type="text" class="input1" value="Padang" />
+      </li>
+      <li id="palangkaraya">
+        Palangkaraya
+        <button id="kePalangkaraya">Klik!</button>
+        <button id="hidePalangkaraya">Hide</button>
+        <button id="hapusPalangkaraya">Hapus</button>
+      </li>
+      <li>
+        <input type="text" class="input2" />
+      </li>
+    </ul>
+    <button id="tombolLokasi">Toggle Lokasi</button>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Fungsi Even Handler Klik
+        $("#kePalangkaraya").on("click", function () {
+          alert(`Kamu klik pilihan Palangkaraya`);
+        });
+        $("#hapusPalangkaraya").on("click", function () {
+          $("#palangkaraya").remove();
+          alert(`Palangkaraya dihapus!!!`);
+        });
+        $("#hidePalangkaraya").on("click", function () {
+          // $("#palangkaraya").hide();
+          // $("#palangkaraya").fadeOut(2000);
+          $("#palangkaraya").slideUp(2000);
+          alert(`Palangkaraya dihide!!!`);
+        });
+        $("#tombolLokasi").on("click", function () {
+          // $(".lokasi").toggle();
+          // $(".lokasi").fadeToggle();
+          // $(".lokasi").slideToggle();
+          $(".lokasi").animate({
+            marginLeft: 100,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
